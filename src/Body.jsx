@@ -9,7 +9,7 @@ const Body = () => {
   return (
     <div className="bg-[#FFF7E2] text-black">
       <NavBar />
-      <Search />
+
       <Outlet />
       <SemiFooter />
       <Footer />

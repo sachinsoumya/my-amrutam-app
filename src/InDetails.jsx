@@ -217,7 +217,7 @@ const InDetails = () => {
 
   return (
     data && (
-      <div >
+      <div>
         <div className="grid grid-cols-1 lg:grid-cols-2 ">
           <div>
             <img src={data[0].image} alt="ingredient image" />
@@ -355,11 +355,15 @@ const InDetails = () => {
           <div className="font-semibold text-lg my-2">
             Products with "Chitrak" as primary ingredient
           </div>
-          <div className="grid grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-3">
             {data[0].products.map((item) => (
               <div>
                 <img src={item.image} alt="image" />
                 <div className="font-medium">{item.name}</div>
+                <div className="flex my-2  justify-between">
+                  <div>{item.price}</div>
+                  <div>➕</div>
+                </div>
               </div>
             ))}
           </div>

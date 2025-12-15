@@ -12,44 +12,30 @@ const SemiFooter = () => {
             benefits
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-2">
-            <div className="card  card-xs shadow-sm bg-[#FFF7E2]">
-              <div className="card-body">
-                <h2 className="card-title">Xsmall Card</h2>
-                <p>
-                  A card component has a figure, a body part, and inside body
-                  there are title and actions parts
-                </p>
+            <div className="card  card-xs shadow-sm bg-[#FFF7E2] p-3">
+              <div className="card-body text-center">
+                <p>Access to Prescriptions</p>
               </div>
             </div>
-            <div className="card   card-xs shadow-sm bg-[#FFF7E2]">
-              <div className="card-body">
-                <h2 className="card-title">Xsmall Card</h2>
-                <p>
-                  A card component has a figure, a body part, and inside body
-                  there are title and actions parts
-                </p>
+            <div className="card   card-xs shadow-sm bg-[#FFF7E2] p-3">
+              <div className="card-body text-center">
+                <p>Track health efficiently</p>
               </div>
             </div>
-            <div className="card  card-xs shadow-sm bg-[#FFF7E2]">
-              <div className="card-body">
-                <h2 className="card-title">Xsmall Card</h2>
-                <p>
-                  A card component has a figure, a body part, and inside body
-                  there are title and actions parts
-                </p>
+            <div className="card  card-xs shadow-sm bg-[#FFF7E2] p-3">
+              <div className="card-body text-center">
+                <p>Direct Chat with Doctors</p>
               </div>
             </div>
-            <div className="card   card-xs shadow-sm bg-[#FFF7E2]">
-              <div className="card-body">
-                <h2 className="card-title">Xsmall Card</h2>
-                <p>
-                  A card component has a figure, a body part, and inside body
-                  there are title and actions parts
-                </p>
+            <div className="card   card-xs shadow-sm bg-[#FFF7E2] p-3">
+              <div className="card-body text-center">
+                <p>In-app reminders for consultations</p>
               </div>
             </div>
           </div>
-          <div className="my-3"><img src="../src/assets/sm.png" alt="social media" /></div>
+          <div className="my-3">
+            <img src="../src/assets/sm.png" alt="social media" />
+          </div>
         </div>
 
         <div>
@@ -62,7 +48,13 @@ const SemiFooter = () => {
             </div>
           </div>
           <div className="my-2">
-            <div ><img src="../src/assets/Downloads (2).png" alt="download" className="mx-auto" /></div>
+            <div>
+              <img
+                src="../src/assets/Downloads (2).png"
+                alt="download"
+                className="mx-auto"
+              />
+            </div>
           </div>
         </div>
       </div>

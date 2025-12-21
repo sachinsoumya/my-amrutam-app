@@ -3,6 +3,10 @@ import { Outlet ,Link} from "react-router-dom";
 
 
 const Forum = () => {
+
+
+
+
   return (
     <div>
        <img src="../src/assets/banner.png" alt="banner image" className="w-6/6 object-cover" />

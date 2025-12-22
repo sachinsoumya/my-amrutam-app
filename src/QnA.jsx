@@ -1,14 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import Replies from "./Replies";
+import ShowReplies from "./ShowReplies";
 
 const QnA = () => {
   const [qna, setQna] = useState([]);
-  const [showReplies , setShowReplies] = useState("");
+  const [showReplies, setShowReplies] = useState("");
 
   const getData = () => {
-
     const data = [
       {
         id: 1,
@@ -163,6 +162,58 @@ const QnA = () => {
   return (
     qna && (
       <div>
+        <div className="flex justify-between m-3 gap-1">
+          <label className="input w-6/6   border-gray-300 bg-white rounded-full flex gap-2 ">
+            <svg
+              className="h-[1em] opacity-50"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <g
+                strokeLinejoin="round"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+                fill="none"
+                stroke="currentColor"
+              >
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.3-4.3"></path>
+              </g>
+            </svg>
+            <input type="search" required placeholder="Search" />
+          </label>
+          <div className="dropdown dropdown-end">
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn btn-white border-gray-300 bg-white btn-dash avatar"
+            >
+              <div className="w-10 rounded-2xl text-center">🟰</div>
+            </div>
+            <ul
+              tabIndex="-1"
+              className="menu menu-sm dropdown-content bg-white rounded-box z-1 mt-3 w-52 p-2 shadow"
+            >
+              <li>
+                <a>Recent</a>
+                <hr />
+              </li>
+              <li>
+                <a>Most Liked</a>
+                <hr />
+              </li>
+              <li>
+                <a>Most Commented</a>
+                <hr />
+              </li>
+              <li>
+                <a>Oldest</a>
+                <hr />
+              </li>
+            </ul>
+          </div>
+        </div>
+
         <div className="flex  w-full justify-between p-3">
           <div className="flex gap-2 ">
             <img src="../src/assets/User.png" alt="profile-image" />
@@ -170,7 +221,52 @@ const QnA = () => {
           </div>
 
           <div>
-            <button className="btn btn-success">Ask Questions</button>
+            <button
+              className="btn btn-success"
+              onClick={() => document.getElementById("my_modal_5").showModal()}
+            >
+              Ask Questions
+            </button>
+            <dialog
+              id="my_modal_5"
+              className="modal modal-bottom sm:modal-middle "
+            >
+              <div className="modal-box bg-white">
+                <h3 className="font-semibold text-lg">Ask Questions!</h3>
+                <p className="py-4">
+                  <div className="flex justify-between">
+                    <img src="../src/assets/User.png" alt="" />
+
+                    <button className="btn btn-success">Ask</button>
+                  </div>
+                  <fieldset className="fieldset">
+                    <legend className="fieldset-legend text-black">
+                      What is your name?
+                    </legend>
+                    <input
+                      type="text"
+                      className="input bg-white input-neutral w-full"
+                      placeholder="Ask your question here"
+                    />
+                    <legend className="fieldset-legend text-black">
+                      Attachments
+                    </legend>
+                    <input
+                      type="file"
+                      className="input bg-white input-neutral w-full"
+                      placeholder="Ask your question here"
+                    />
+                    <p className="label">Optional</p>
+                  </fieldset>
+                </p>
+                <div className="modal-action">
+                  <form method="dialog">
+                    {/* if there is a button in form, it will close the modal */}
+                    <button className="btn">Close</button>
+                  </form>
+                </div>
+              </div>
+            </dialog>
           </div>
         </div>
 
@@ -190,17 +286,17 @@ const QnA = () => {
                 <div className="py-2">{item.answer}</div>
               </div>
 
-              
+              <ShowReplies replies={item.replies} />
 
-              <div className="flex justify-end ">
+              {/* <div className="flex justify-end ">
                 <div className="w-3/4">
                  <Replies  replies={item.replies}/>
                  
                 </div>
-              </div>
+              </div> */}
 
               <hr />
-            </div> 
+            </div>
           ))}
         </div>
       </div>

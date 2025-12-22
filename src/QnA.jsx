@@ -1,11 +1,10 @@
-import React from "react";
-import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import ShowReplies from "./ShowReplies";
+import Modal from "./Modal";
 
 const QnA = () => {
   const [qna, setQna] = useState([]);
-  const [showReplies, setShowReplies] = useState("");
+  // const [showReplies, setShowReplies] = useState("");
 
   const getData = () => {
     const data = [
@@ -161,7 +160,7 @@ const QnA = () => {
 
   return (
     qna && (
-      <div>
+      <div className="py-2">
         <div className="flex justify-between m-3 gap-1">
           <label className="input w-6/6   border-gray-300 bg-white rounded-full flex gap-2 ">
             <svg
@@ -231,41 +230,7 @@ const QnA = () => {
               id="my_modal_5"
               className="modal modal-bottom sm:modal-middle "
             >
-              <div className="modal-box bg-white">
-                <h3 className="font-semibold text-lg">Ask Questions!</h3>
-                <p className="py-4">
-                  <div className="flex justify-between">
-                    <img src="../src/assets/User.png" alt="" />
-
-                    <button className="btn btn-success">Ask</button>
-                  </div>
-                  <fieldset className="fieldset">
-                    <legend className="fieldset-legend text-black">
-                      What is your name?
-                    </legend>
-                    <input
-                      type="text"
-                      className="input bg-white input-neutral w-full"
-                      placeholder="Ask your question here"
-                    />
-                    <legend className="fieldset-legend text-black">
-                      Attachments
-                    </legend>
-                    <input
-                      type="file"
-                      className="input bg-white input-neutral w-full"
-                      placeholder="Ask your question here"
-                    />
-                    <p className="label">Optional</p>
-                  </fieldset>
-                </p>
-                <div className="modal-action">
-                  <form method="dialog">
-                    {/* if there is a button in form, it will close the modal */}
-                    <button className="btn">Close</button>
-                  </form>
-                </div>
-              </div>
+              <Modal />
             </dialog>
           </div>
         </div>

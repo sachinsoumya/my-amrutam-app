@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import ShowReplies from "./ShowReplies";
 import Modal from "./Modal";
+import ModalSearch from "./ModalSearch";
 
 const QnA = () => {
   const [qna, setQna] = useState([]);
@@ -162,7 +163,7 @@ const QnA = () => {
     qna && (
       <div className="py-2">
         <div className="flex justify-between m-3 gap-1">
-          <label className="input w-6/6   border-gray-300 bg-white rounded-full flex gap-2 ">
+          {/* <label className="input w-6/6   border-gray-300 bg-white rounded-full flex gap-2 ">
             <svg
               className="h-[1em] opacity-50"
               xmlns="http://www.w3.org/2000/svg"
@@ -179,8 +180,10 @@ const QnA = () => {
                 <path d="m21 21-4.3-4.3"></path>
               </g>
             </svg>
+
             <input type="search" required placeholder="Search" />
-          </label>
+          </label> */}
+          <ModalSearch />
           <div className="dropdown dropdown-end">
             <div
               tabIndex={0}

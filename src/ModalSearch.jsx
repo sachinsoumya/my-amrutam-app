@@ -115,6 +115,7 @@ const ModalSearch = () => {
                 required
                 placeholder="Search"
                 value={searchTerm}
+                onChange={(event)=>setSearchTerm(event.target.value)}
               />
             </label>
             <div className="py-4 flex flex-wrap gap-2 justify-center">

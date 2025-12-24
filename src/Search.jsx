@@ -2,7 +2,7 @@ import React from "react";
 
 const Search = () => {
   return (
-    <div className="bg-[url(../assets/search-bg.png)]  p-10">
+    <div className="bg-[url(../src/assets/search-bg.png)]  p-10">
       <div className="text-3xl font-bold text-center">Store</div>
       <div className="join flex justify-center gap-2 my-4 ">
         <div >

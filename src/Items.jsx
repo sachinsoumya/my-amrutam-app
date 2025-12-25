@@ -42,18 +42,18 @@ const Items = () => {
  
 
   return (
-    <div className="flex justify-evenly ">
+    <div className="grid grid-cols-1 md:grid-cols-3 md:gap-2 px-2 md:px-0 py-2">
       {data.map((item) => (
         <div className="rounded-full">
           <Link to="/details">
-            <img src={item.image} alt="product picture" />
+            <img src={item.image} alt="product picture" className="w-full object-cover" />
           </Link>
 
-          <div className="text-center w-3/4">{item.text}</div>
-          <div className="text-center w-3/4">
-            {item.price}-{item.amount}
+          <div className="text-center w-full pt-3">{item.text}</div>
+          <div className="text-center">
+            ₹ {item.price}-{item.amount}
           </div>
-          <div className="text-center w-3/4">{item.ratings}</div>
+          <div className="text-center ">Ratings - {item.ratings} </div>
         </div>
       ))}
       {/* <div>

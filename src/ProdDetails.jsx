@@ -221,22 +221,22 @@ const ProdDetails = () => {
   return (
     data && (
       <div className="px-2 ">
-        <div className="grid  grid-cols-1 lg:grid-cols-2 ">
+        <div className="grid  grid-cols-1 lg:grid-cols-3  ">
           <div>
             <img
               src={data[0].image}
               alt="prodimage"
-              className="w-full lg:w-8/12"
+              className="w-full lg:w-full"
             />
           </div>
 
-          <div>
+          <div className="lg:col-span-2 px-5">
             <div className="font-bold text-2xl">{data[0].name}</div>
             <div className="text-xl font-semibold mt-4">
               ₹ {data[0].price} / {data[0].amount}
             </div>
-            <div className="flex w-full my-6">
-              <button className="btn btn-soft w-1/2">Default</button>
+            <div className="flex w-full my-6 gap-2">
+              <button className="btn btn-neutral text-black  text-3xl  bg-transparent w-1/2 flex justify-between"><div>-</div><div>+</div></button>
               <button className="btn btn-active btn-success w-1/2">
                 Add to Cart
               </button>

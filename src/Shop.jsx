@@ -6,8 +6,12 @@ const Shop = () => {
   return (
     <div>
       <Search />
-      <Summer />
-      <Summer />
+      <div>
+        <Summer/>
+        <Summer/>
+
+      </div>
+      x
     </div>
   );
 };

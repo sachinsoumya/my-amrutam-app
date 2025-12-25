@@ -3,8 +3,8 @@ import Items from './Items'
 
 export const Summer = () => {
   return (
-    <div>
-        <div>Summer Item</div>
+    <div className='md:ps-10'>
+        <div className='text-xl font-medium'>Summer Collections</div>
         <Items />
     </div>
   )

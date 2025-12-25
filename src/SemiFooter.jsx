@@ -1,6 +1,7 @@
 const SemiFooter = () => {
   return (
     <div className="py-10">
+      <hr className="font-light py-3" />
       <div className="grid lg:grid-cols-2 grid-cols-1 px-2">
         <div>
           <div className="font-bold text-2xl text-[#3A643B] font-serif my-2">

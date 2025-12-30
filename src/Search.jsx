@@ -5,7 +5,7 @@ const Search = () => {
     <div className="bg-[url(../src/assets/search-bg.png)]  p-10">
       <div className="text-3xl font-bold text-center my-2">Store</div>
       <div className="flex justify-center gap-2 my-4 ">
-        <div className="w-1/3">
+        <div className=" w-full lg:w-1/3">
           <label className="input w-full bg-white rounded-lg border border-black">
             <svg
               className="h-[1em] opacity-50"

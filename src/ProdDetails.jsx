@@ -1,5 +1,5 @@
 import React from "react";
-import {Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const ProdDetails = () => {
   const data = [
@@ -236,7 +236,10 @@ const ProdDetails = () => {
               ₹ {data[0].price} / {data[0].amount}
             </div>
             <div className="flex w-full my-6 gap-2">
-              <button className="btn btn-neutral text-black  text-3xl  bg-transparent w-1/2 flex justify-between"><div>-</div><div>+</div></button>
+              <button className="btn btn-neutral text-black  text-3xl  bg-transparent w-1/2 flex justify-between">
+                <div>-</div>
+                <div>+</div>
+              </button>
               <button className="btn btn-active btn-success w-1/2">
                 Add to Cart
               </button>
@@ -302,19 +305,46 @@ const ProdDetails = () => {
             Reviews and Ratings
           </div>
           <div className="flex justify-around my-4">
-            <div className="card bg-[#FDEAD2]  shadow-sm">
-              <div className="card-body">
-                <h2 className="card-title">{data[0].ratings}</h2>
-                <p>based on {data[0].reviews} reviews</p>
+            <div className="card bg-[#FDEAD2]  shadow-sm p-2">
+              <div className="card-body flex-row">
+                <h2 className="card-title text-3xl font-medium">
+                  {data[0].ratings}.0
+                </h2>
+                <div>
+                  <div className="rating">
+                    <div
+                      className="mask mask-star-2 bg-orange-400"
+                      aria-label="1 star"
+                    ></div>
+                    <div
+                      className="mask mask-star-2 bg-orange-400"
+                      aria-label="2 star"
+                    ></div>
+                    <div
+                      className="mask mask-star-2 bg-orange-400"
+                      aria-label="3 star"
+                      aria-current="true"
+                    ></div>
+                    <div
+                      className="mask mask-star-2 bg-orange-400"
+                      aria-label="4 star"
+                    ></div>
+                    <div
+                      className="mask mask-star-2 bg-orange-400"
+                      aria-label="5 star"
+                    ></div>
+                  </div>
+                  <p>based on {data[0].reviews} reviews</p>
+                </div>
               </div>
             </div>
 
-            <div>
+            <div className="flex ">
               <button className="btn btn-soft bg-[#FFF7E2] mx-2 text-success">
-                Default
+                See some reviews
               </button>
               <button className="btn btn-soft bg-[#FFF7E2] text-success">
-                Default
+                Write a review
               </button>
             </div>
           </div>
@@ -326,6 +356,39 @@ const ProdDetails = () => {
               <div className="flex gap-6">
                 <div>{item.name}</div>
                 <div>{item.date}</div>
+                <div className="rating">
+                  <input
+                    type="radio"
+                    name="rating-2"
+                    className="mask mask-star-2 bg-orange-400"
+                    aria-label="1 star"
+                  />
+                  <input
+                    type="radio"
+                    name="rating-2"
+                    className="mask mask-star-2 bg-orange-400"
+                    aria-label="2 star"
+                    defaultChecked
+                  />
+                  <input
+                    type="radio"
+                    name="rating-2"
+                    className="mask mask-star-2 bg-orange-400"
+                    aria-label="3 star"
+                  />
+                  <input
+                    type="radio"
+                    name="rating-2"
+                    className="mask mask-star-2 bg-orange-400"
+                    aria-label="4 star"
+                  />
+                  <input
+                    type="radio"
+                    name="rating-2"
+                    className="mask mask-star-2 bg-orange-400"
+                    aria-label="5 star"
+                  />
+                </div>
               </div>
             </div>
           </div>

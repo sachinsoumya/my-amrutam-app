@@ -12,6 +12,7 @@ const Body = () => {
 
       <Outlet />
       <SemiFooter />
+
       <Footer />
     </div>
   );

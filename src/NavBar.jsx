@@ -1,13 +1,14 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
-   <div className="bg-amber-200 shadow-sm text-emerald-500 ">
-    <div className="text-center"><a className="text-xl ">AMRUTAM</a></div>
-    
+    <div className="bg-[#FFF7E2] shadow-sm text-emerald-500 ">
+      <div className="text-center">
+        <a className="text-xl ">AMRUTAM</a>
+      </div>
+
       <div className="navbar 	">
-        
         {/* <div class>Hello</div> */}
         <div className="navbar-start grow-0">
           <div className="dropdown">
@@ -57,24 +58,29 @@ const NavBar = () => {
         </div>
         <div className="navbar-center hidden lg:flex ">
           <ul className="menu menu-horizontal px-1">
-            <li className=" hover:underline" >
-             <a>Home</a>
+            <li className=" hover:underline">
+              <a>Home</a>
             </li>
             <li className=" hover:underline">
-               <a>FindDoctors</a>
+              <a>FindDoctors</a>
             </li>
             <li className=" hover:underline">
               <a>LabTests</a>
             </li>
             <li className=" hover:underline">
-               <Link to="/shop"><a>Shop</a></Link>
+              <Link to="/shop">
+                <a>Shop</a>
+              </Link>
             </li>
             <li className=" hover:underline">
-               <Link to="/forum"><a>Forum</a></Link>
+              <Link to="/forum">
+                <a>Forum</a>
+              </Link>
             </li>
             <li className=" hover:underline">
-             <a>About us</a>
+              <a>About us</a>
             </li>
+
             {/* <li>
         <details>
           <summary>Parent</summary>
@@ -86,16 +92,48 @@ const NavBar = () => {
       </li> */}
           </ul>
         </div>
-        <div className="navbar-end  justify-center grow-7">
+        <div className="navbar-end  justify-evenly grow-7 ">
+          <div className="indicator ">
+            <span className="indicator-item badge badge-success">12</span>
+            <a className=" rounded-full  p-2">👜</a>
+          </div>
 
-          <a className="bg-transparent border-none">Button</a>
-          <a className="bg-transparent border-none">Button</a>
-          <a className="bg-transparent border-none">Button</a>
-          <a className="bg-transparent border-none">Button</a>
+          <div className="indicator ">
+            <span className="indicator-item badge badge-success">1</span>
+            <a className=" rounded-full  p-2">🛒</a>
+          </div>
+          <div className="indicator ">
+            <span className="indicator-item badge badge-success">1</span>
+            <a className=" rounded-full  p-2">🔔</a>
+          </div>
+          <div className="indicator ">
+           
+
+            <div className="dropdown dropdown-end">
+              <div
+                tabIndex={0}
+                role="button"
+                className="rounded-field"
+              >
+                <a className=" rounded-full  p-2">🙍‍♂️</a>
+              </div>
+              <ul
+                tabIndex="-1"
+                className="menu dropdown-content bg-[#FFF7E2] rounded-box z-1 mt-4 w-52 p-2 shadow-sm"
+              >
+                <li>
+                  <a>Profile</a>
+                </li>
+                <li>
+                  <a>Logout</a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default NavBar
+export default NavBar;

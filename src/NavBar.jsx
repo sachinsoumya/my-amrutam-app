@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <div className="bg-[#FFF7E2] shadow-sm text-emerald-500 ">
-      <div className="text-center">
+    <div className="bg-[#FFF7E2] shadow-sm text-emerald-500 py-2 ">
+      <div className="text-center hidden md:block">
         <a className="text-xl ">AMRUTAM</a>
       </div>
 
@@ -56,6 +56,11 @@ const NavBar = () => {
           </div>
           {/* <a className="btn btn-ghost text-xl text-center">AMRUTAM</a> */}
         </div>
+        <div className="block md:hidden">
+          <div className="text-center">
+            <a className="text-md font-bold ">AMRUTAM</a>
+          </div>
+        </div>
         <div className="navbar-center hidden lg:flex ">
           <ul className="menu menu-horizontal px-1">
             <li className=" hover:underline">
@@ -92,9 +97,9 @@ const NavBar = () => {
       </li> */}
           </ul>
         </div>
-        <div className="navbar-end  justify-evenly grow-7 ">
+        <div className="navbar-end  md:justify-evenly grow-7 ">
           <div className="indicator ">
-            <span className="indicator-item badge badge-success">12</span>
+            {/* <span className="indicator-item badge badge-success"></span> */}
             <a className=" rounded-full  p-2">👜</a>
           </div>
 
@@ -102,33 +107,34 @@ const NavBar = () => {
             <span className="indicator-item badge badge-success">1</span>
             <a className=" rounded-full  p-2">🛒</a>
           </div>
-          <div className="indicator ">
-            <span className="indicator-item badge badge-success">1</span>
-            <a className=" rounded-full  p-2">🔔</a>
-          </div>
-          <div className="indicator ">
-           
-
-            <div className="dropdown dropdown-end">
-              <div
-                tabIndex={0}
-                role="button"
-                className="rounded-field"
-              >
-                <a className=" rounded-full  p-2">🙍‍♂️</a>
-              </div>
-              <ul
-                tabIndex="-1"
-                className="menu dropdown-content bg-[#FFF7E2] rounded-box z-1 mt-4 w-52 p-2 shadow-sm"
-              >
-                <li>
-                  <a>Profile</a>
-                </li>
-                <li>
-                  <a>Logout</a>
-                </li>
-              </ul>
+          <div className="hidden md:block ">
+            <div className="indicator ">
+              <span className="indicator-item badge badge-success">1</span>
+              <a className=" rounded-full  p-2">🔔</a>
             </div>
+            <div className="indicator pl-10 ">
+              <div className="dropdown dropdown-end">
+                <div tabIndex={0} role="button" className="rounded-field">
+                  <a className=" rounded-full  p-2">🙍‍♂️</a>
+                </div>
+                <ul
+                  tabIndex="-1"
+                  className="menu dropdown-content bg-[#FFF7E2] rounded-box z-1 mt-4 w-52 p-2 shadow-sm"
+                >
+                  <li>
+                    <a>Profile</a>
+                  </li>
+                  <li>
+                    <a>Logout</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div>
+            <button className="btn btn-active btn-success btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl md:hidden rounded-xl">
+              Login
+            </button>
           </div>
         </div>
       </div>

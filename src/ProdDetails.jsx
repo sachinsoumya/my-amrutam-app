@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState ,useEffect} from "react";
 import { Link } from "react-router-dom";
 
 const ProdDetails = () => {
+  const [prodData,setProdData] = useState(null);
   const data = [
     {
       image: "../src/assets/p1.jpg",
@@ -10,6 +11,7 @@ const ProdDetails = () => {
         "Amrutam's Kuntal Care Do-It-Yourself Hair Spa is an ayurvedic marvel filled to the brim with revitalizing herbs and essential oils like Eucalyptus oil, Triphala, Balchhad and Bhringraj. These Ayurvedic ingredients when fused together make a potent dollop that nourishes dry and frizzy hair making it soft and bouncy!This spa treatment revitalizes the roots, promotes growth, provides shine, coats hair with a moisturizing layer and is the best stress reliever!It's time to bring spa home and unwind.",
       price: 699,
       amount: "200ml",
+
       hightlights: [
         "Helps with Dry, Frizzy Hair",
         "Relaxes the scalp, improves hair health",
@@ -55,8 +57,8 @@ const ProdDetails = () => {
         },
       ],
 
-      ratings: 5.0,
-      reviews: 20,
+      ratings: 5,
+      reviews: 204,
       comments: [
         {
           name: "Sabarinath J",
@@ -70,7 +72,7 @@ const ProdDetails = () => {
           date: "20 January 2023",
           content:
             "Might be bit early to confirm but yes I can see noticeable difference in my hairfall. will write again after using it for longer periods",
-          ratings: 5,
+          ratings: 4,
         },
       ],
     },
@@ -218,8 +220,13 @@ const ProdDetails = () => {
       ],
     },
   ];
+
+  useEffect(()=>{
+    setProdData(data);
+
+  },[])
   return (
-    data && (
+    prodData && (
       <div className="px-2 ">
         <div className="grid  grid-cols-1 lg:grid-cols-3  ">
           <div>
@@ -232,9 +239,49 @@ const ProdDetails = () => {
 
           <div className="lg:col-span-2 px-5">
             <div className="font-bold text-2xl">{data[0].name}</div>
+            <div>
+              <div className="rating py-2">
+                <input
+                  className="mask mask-star-2 bg-orange-400"
+                  aria-label="1 star"
+                  aria-current={data[0].ratings === 1}
+                />
+                <input
+                  name="rating-2"
+                  className="mask mask-star-2 bg-orange-400"
+                  aria-label="2 star"
+                  aria-current={data[0].ratings === 2}
+                />
+                <input
+                  name="rating-2"
+                  className="mask mask-star-2 bg-orange-400"
+                  aria-label="3 star"
+                  aria-current={data[0].ratings === 3}
+                />
+                <input
+                  name="rating-2"
+                  className="mask mask-star-2 bg-orange-400"
+                  aria-label="4 star"
+                  aria-current={data[0].ratings === 4}
+                />
+                <input
+                  name="rating-2"
+                  className="mask mask-star-2 bg-orange-400"
+                  aria-label="5 star"
+                  aria-current={data[0].ratings === 5}
+                />
+              </div>
+              <span className="px-2">({data[0].reviews} Reviews)</span>
+            </div>
             <div className="text-xl font-semibold mt-4">
               ₹ {data[0].price} / {data[0].amount}
             </div>
+
+            <div className="flex ">
+              
+
+            </div>
+
             <div className="flex w-full my-6 gap-2">
               <button className="btn btn-neutral text-black  text-3xl  bg-transparent w-1/2 flex justify-between">
                 <div>-</div>
@@ -358,35 +405,33 @@ const ProdDetails = () => {
                 <div>{item.date}</div>
                 <div className="rating">
                   <input
-                    type="radio"
-                    name="rating-2"
                     className="mask mask-star-2 bg-orange-400"
                     aria-label="1 star"
+                    aria-current={item.ratings === 1}
                   />
                   <input
-                    type="radio"
                     name="rating-2"
                     className="mask mask-star-2 bg-orange-400"
                     aria-label="2 star"
-                    defaultChecked
+                    aria-current={item.ratings === 2}
                   />
                   <input
-                    type="radio"
                     name="rating-2"
                     className="mask mask-star-2 bg-orange-400"
                     aria-label="3 star"
+                    aria-current={item.ratings === 3}
                   />
                   <input
-                    type="radio"
                     name="rating-2"
                     className="mask mask-star-2 bg-orange-400"
                     aria-label="4 star"
+                    aria-current={item.ratings === 4}
                   />
                   <input
-                    type="radio"
                     name="rating-2"
                     className="mask mask-star-2 bg-orange-400"
                     aria-label="5 star"
+                    aria-current={item.ratings === 5}
                   />
                 </div>
               </div>

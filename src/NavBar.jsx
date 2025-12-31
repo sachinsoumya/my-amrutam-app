@@ -38,7 +38,7 @@ const NavBar = () => {
               </div>
               <ul
                 tabIndex="-1"
-                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+                className="menu menu-sm dropdown-content bg-[#FFF7E2] rounded-box z-1 mt-3 w-52 p-2 shadow"
               >
                 <li>
                   <a>Home</a>
@@ -50,10 +50,14 @@ const NavBar = () => {
                   <a>LabTests</a>
                 </li>
                 <li>
-                  <a>Shop</a>
+                  <Link to="/shop">
+                    <a>Shop</a>
+                  </Link>
                 </li>
                 <li>
-                  <a>Forum</a>
+                  <Link to="/forum">
+                    <a>Forum</a>
+                  </Link>
                 </li>
 
                 <li>
@@ -120,9 +124,9 @@ const NavBar = () => {
                 <a className=" rounded-full  p-2">🔔</a>
               </div>
               <div className="indicator pl-10 ">
-                <div className="dropdown dropdown-end">
+                <div className="dropdown dropdown-end cursor-pointer">
                   <div tabIndex={0} role="button" className="rounded-field">
-                    <a className=" rounded-full  p-2">🙍‍♂️</a>
+                    <a className=" rounded-full  p-2 ">🙍‍♂️</a>
                   </div>
                   <ul
                     tabIndex="-1"

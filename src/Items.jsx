@@ -8,7 +8,7 @@ const Items = () => {
   const getData = () => {
     const data = [
       {
-        id: 1,
+        id: 0,
         image: "../src/assets/p1.jpg",
         text: "Amrutam Kuntal care Hair Spa | Do- it yourself Hair Treatment",
         ratings: 5,
@@ -17,7 +17,7 @@ const Items = () => {
         amount: "200ml",
       },
       {
-        id: 2,
+        id: 1,
         image: "../src/assets/p2.jpg",
         text: "Amrutam Kuntal care Hair Spa | Do- it yourself Hair Treatment",
         ratings: 5,
@@ -26,7 +26,7 @@ const Items = () => {
         amount: "200ml",
       },
       {
-        id: 3,
+        id: 2,
         image: "../src/assets/p3.jpg",
         text: "Amrutam Kuntal care Hair Spa | Do- it yourself Hair Treatment",
         ratings: 5,
@@ -46,7 +46,7 @@ const Items = () => {
     <div className="grid grid-cols-1 md:grid-cols-3 md:gap-2 px-2 md:px-0 py-2">
       {data.map((item) => (
         <div className="rounded-full">
-          <Link to="/details">
+          <Link to={`/details/${item.id}`}>
             <img
               src={item.image}
               alt="product picture"
@@ -58,6 +58,8 @@ const Items = () => {
           <div className="text-center">
             ₹ {item.price}-{item.amount}
           </div>
+
+          
 
          
 

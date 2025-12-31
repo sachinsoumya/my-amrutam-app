@@ -1,8 +1,10 @@
-import React, { useState ,useEffect} from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useParams } from "react-router-dom";
 
 const ProdDetails = () => {
-  const [prodData,setProdData] = useState(null);
+  const [prodData, setProdData] = useState(null);
+  const { id } = useParams();
+
   const data = [
     {
       image: "../src/assets/p1.jpg",
@@ -221,66 +223,83 @@ const ProdDetails = () => {
     },
   ];
 
-  useEffect(()=>{
-    setProdData(data);
+  useEffect(() => {
+    setProdData(data[id]);
+  }, []);
 
-  },[])
+  const handleClick = (price, amount) => {
+    const newProdData = { ...prodData, price: price, amount: amount };
+    console.log(newProdData);
+    setProdData(newProdData);
+  };
   return (
     prodData && (
       <div className="px-2 ">
         <div className="grid  grid-cols-1 lg:grid-cols-3  ">
           <div>
             <img
-              src={data[0].image}
+              src={prodData.image}
               alt="prodimage"
               className="w-full lg:w-full"
             />
           </div>
 
           <div className="lg:col-span-2 px-5">
-            <div className="font-bold text-2xl">{data[0].name}</div>
+            <div className="font-bold text-2xl">{prodData.name}</div>
             <div>
               <div className="rating py-2">
                 <input
                   className="mask mask-star-2 bg-orange-400"
                   aria-label="1 star"
-                  aria-current={data[0].ratings === 1}
+                  aria-current={prodData.ratings === 1}
                 />
                 <input
                   name="rating-2"
                   className="mask mask-star-2 bg-orange-400"
                   aria-label="2 star"
-                  aria-current={data[0].ratings === 2}
+                  aria-current={prodData.ratings === 2}
                 />
                 <input
                   name="rating-2"
                   className="mask mask-star-2 bg-orange-400"
                   aria-label="3 star"
-                  aria-current={data[0].ratings === 3}
+                  aria-current={prodData.ratings === 3}
                 />
                 <input
                   name="rating-2"
                   className="mask mask-star-2 bg-orange-400"
                   aria-label="4 star"
-                  aria-current={data[0].ratings === 4}
+                  aria-current={prodData.ratings === 4}
                 />
                 <input
                   name="rating-2"
                   className="mask mask-star-2 bg-orange-400"
                   aria-label="5 star"
-                  aria-current={data[0].ratings === 5}
+                  aria-current={prodData.ratings === 5}
                 />
               </div>
-              <span className="px-2">({data[0].reviews} Reviews)</span>
+              <span className="px-2">({prodData.reviews} Reviews)</span>
             </div>
             <div className="text-xl font-semibold mt-4">
-              ₹ {data[0].price} / {data[0].amount}
+              ₹ {prodData.price} / {prodData.amount}
             </div>
 
-            <div className="flex ">
-              
-
+            <div className="flex py-2 gap-2 text-black">
+              <button
+                className="btn btn-xs bg-[#F0F0F0] text-black hover:bg-[#9DB29D]"
+                onClick={() => handleClick(699, "200ml")}
+              >
+                200ml
+              </button>
+              <button
+                className="btn btn-xs bg-[#F0F0F0] text-black hover:bg-[#9DB29D]"
+                onClick={() => handleClick(399, "100ml")}
+              >
+                100ml
+              </button>
             </div>
+
+            <div className="flex "></div>
 
             <div className="flex w-full my-6 gap-2">
               <button className="btn btn-neutral text-black  text-3xl  bg-transparent w-1/2 flex justify-between">
@@ -292,7 +311,7 @@ const ProdDetails = () => {
               </button>
             </div>
             <div>
-              <div className="text-justify">{data[0].description}</div>
+              <div className="text-justify">{prodData.description}</div>
             </div>
             <div>
               <div className="text-xl font-semibold my-6">
@@ -300,16 +319,13 @@ const ProdDetails = () => {
               </div>
 
               <div className="grid   grid-cols-1 lg:grid-cols-2 gap-2">
-                {data[0].ingridients.map((item) => (
+                {prodData.ingridients.map((item) => (
                   <Link to="/ingredients">
                     {" "}
                     <div className="card shadow-sm bg-[#FDEAD2]">
                       <div className="card-body">
                         <h2 className="card-title">{item.name}</h2>
                         <p>{item.desc}</p>
-                        <div className="card-actions justify-end">
-                          <button className="btn btn-primary">Buy Now</button>
-                        </div>
                       </div>
                     </div>
                   </Link>
@@ -319,7 +335,7 @@ const ProdDetails = () => {
               <div className="text-xl font-semibold my-6">How to use</div>
               <div className="card bg-[#FDEAD2] shadow-sm">
                 <div className="card-body">
-                  <p>{data[0].usage}</p>
+                  <p>{prodData.usage}</p>
                 </div>
               </div>
 
@@ -328,14 +344,14 @@ const ProdDetails = () => {
               </div>
               <div className="card bg-[#FDEAD2]  shadow-sm">
                 <div className="card-body">
-                  <p>{data[0].instructions}</p>
+                  <p>{prodData.instructions}</p>
                 </div>
               </div>
 
               <div className="text-xl font-semibold my-6">
                 Commonly asked questions
               </div>
-              {data[0].qna.map((item) => (
+              {prodData.qna.map((item) => (
                 <div className="card bg-[#FDEAD2]  shadow-sm my-2">
                   <div className="card-body">
                     <div className="font-medium">{item.question}</div>
@@ -355,7 +371,7 @@ const ProdDetails = () => {
             <div className="card bg-[#FDEAD2]  shadow-sm p-2">
               <div className="card-body flex-row">
                 <h2 className="card-title text-3xl font-medium">
-                  {data[0].ratings}.0
+                  {prodData.ratings}.0
                 </h2>
                 <div>
                   <div className="rating">
@@ -381,7 +397,7 @@ const ProdDetails = () => {
                       aria-label="5 star"
                     ></div>
                   </div>
-                  <p>based on {data[0].reviews} reviews</p>
+                  <p>based on {prodData.reviews} reviews</p>
                 </div>
               </div>
             </div>
@@ -396,7 +412,7 @@ const ProdDetails = () => {
             </div>
           </div>
         </div>
-        {data[0].comments.map((item) => (
+        {prodData.comments.map((item) => (
           <div className="card bg-[#FDEAD2] shadow-sm my-2">
             <div className="card-body">
               <p>{item.content}</p>

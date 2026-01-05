@@ -5,11 +5,9 @@ import Search from "./Search";
 const Shop = () => {
   return (
     <div>
-      <Search />
       <div>
-        <Summer/>
-        <Summer/>
-
+        <Summer />
+        <Summer />
       </div>
       x
     </div>

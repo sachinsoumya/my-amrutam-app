@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 
+import Expert from "./Expert";
+
 const ProdDetails = () => {
   const [prodData, setProdData] = useState(null);
   const { id } = useParams();
@@ -367,7 +369,7 @@ const ProdDetails = () => {
           <div className="text-center font-semibold text-xl my-3">
             Reviews and Ratings
           </div>
-          <div className="flex justify-around my-4">
+          <div className="flex justify-around my-4 flex-wrap">
             <div className="card bg-[#FDEAD2]  shadow-sm p-2">
               <div className="card-body flex-row">
                 <h2 className="card-title text-3xl font-medium">
@@ -454,6 +456,7 @@ const ProdDetails = () => {
             </div>
           </div>
         ))}
+        <Expert />
       </div>
     )
   );

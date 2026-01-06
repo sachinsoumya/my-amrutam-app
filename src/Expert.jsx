@@ -43,7 +43,7 @@ const Expert = () => {
     experts && (
       <div className="bg-white py-5">
         <div>Its Expert </div>
-        <div class= " flex justify-center gap-2 flex-wrap">
+        <div class= " flex justify-center gap-4 flex-wrap">
           {experts.map((item) => (
             <ExpertCard data={item} />
            

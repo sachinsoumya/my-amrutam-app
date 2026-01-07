@@ -1,6 +1,9 @@
 const ExpertCard = ({ data }) => {
+
+  console.log(data);
+  
   return (
-    <div className="card bg-[#FFF7E2]  shadow-sm px-0 rounded-2xl ">
+    <div className="card bg-[#FFF7E2]  shadow-sm px-0 rounded-2xl  ">
       <figure className="px-10 pt-10">
         <img src={data.image} alt="Shoes" className="rounded-xl" />
       </figure>
@@ -19,7 +22,7 @@ const ExpertCard = ({ data }) => {
           {" "}
           {data.specialization} Specialist
         </div>
-        <div className="bg-emerald-700 text-center w-full text-white py-3 rounded-full my-2 ">
+        <div className="bg-emerald-700 text-center w-full text-white py-3 rounded-full my-2 cursor-pointer ">
 
           Book Demo
 

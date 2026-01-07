@@ -9,7 +9,7 @@ const ProdDetails = () => {
 
   const data = [
     {
-      image: "../src/assets/p1.jpg",
+      image: "/src/assets/p1.jpg",
       name: "Amrutam Kuntal Care Hair Spa | Do-It-Yourself Hair Treatment",
       description:
         "Amrutam's Kuntal Care Do-It-Yourself Hair Spa is an ayurvedic marvel filled to the brim with revitalizing herbs and essential oils like Eucalyptus oil, Triphala, Balchhad and Bhringraj. These Ayurvedic ingredients when fused together make a potent dollop that nourishes dry and frizzy hair making it soft and bouncy!This spa treatment revitalizes the roots, promotes growth, provides shine, coats hair with a moisturizing layer and is the best stress reliever!It's time to bring spa home and unwind.",
@@ -82,7 +82,7 @@ const ProdDetails = () => {
     },
 
     {
-      image: "../src/assets/p2.jpg",
+      image: "/src/assets/p2.jpg",
       name: "Amrutam Kuntal Care Hair Spa | Do-It-Yourself Hair Treatment",
       description:
         "Amrutam's Kuntal Care Do-It-Yourself Hair Spa is an ayurvedic marvel filled to the brim with revitalizing herbs and essential oils like Eucalyptus oil, Triphala, Balchhad and Bhringraj. These Ayurvedic ingredients when fused together make a potent dollop that nourishes dry and frizzy hair making it soft and bouncy!This spa treatment revitalizes the roots, promotes growth, provides shine, coats hair with a moisturizing layer and is the best stress reliever!It's time to bring spa home and unwind.",
@@ -153,7 +153,7 @@ const ProdDetails = () => {
       ],
     },
     {
-      image: "../src/assets/p3.jpg",
+      image: "/src/assets/p3.jpg",
       name: "Amrutam Kuntal Care Hair Spa | Do-It-Yourself Hair Treatment",
       description:
         "Amrutam's Kuntal Care Do-It-Yourself Hair Spa is an ayurvedic marvel filled to the brim with revitalizing herbs and essential oils like Eucalyptus oil, Triphala, Balchhad and Bhringraj. These Ayurvedic ingredients when fused together make a potent dollop that nourishes dry and frizzy hair making it soft and bouncy!This spa treatment revitalizes the roots, promotes growth, provides shine, coats hair with a moisturizing layer and is the best stress reliever!It's time to bring spa home and unwind.",
@@ -369,7 +369,7 @@ const ProdDetails = () => {
           <div className="text-center font-semibold text-xl my-3">
             Reviews and Ratings
           </div>
-          <div className="flex justify-around my-4 flex-wrap">
+          <div className="flex justify-around my-4 flex-wrap gap-4 py-2">
             <div className="card bg-[#FDEAD2]  shadow-sm p-2">
               <div className="card-body flex-row">
                 <h2 className="card-title text-3xl font-medium">

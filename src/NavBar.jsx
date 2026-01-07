@@ -41,7 +41,9 @@ const NavBar = () => {
                 className="menu menu-sm dropdown-content bg-[#FFF7E2] rounded-box z-1 mt-3 w-52 p-2 shadow"
               >
                 <li>
-                  <a>Home</a>
+                  <Link to="/">
+                    <a>Home</a>
+                  </Link>
                 </li>
                 <li>
                   <a>FindDoctors</a>
@@ -74,9 +76,12 @@ const NavBar = () => {
           </div>
           <div className="navbar-center hidden lg:flex ">
             <ul className="menu menu-horizontal px-1">
-              <li className=" hover:underline">
-                <a>Home</a>
-              </li>
+              <Link to="/">
+                <li className=" hover:underline">
+                  <a>Home</a>
+                </li>
+              </Link>
+
               <li className=" hover:underline">
                 <a>FindDoctors</a>
               </li>

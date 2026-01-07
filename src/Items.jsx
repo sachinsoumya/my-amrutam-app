@@ -46,7 +46,7 @@ const Items = () => {
     <div className="grid grid-cols-1 md:grid-cols-3 md:gap-2 px-2 md:px-0 py-2">
       {data.map((item) => (
         <div className="rounded-full">
-          <Link to={`/details/${item.id}`}>
+          <Link to={`details/${item.id}`}>
             <img
               src={item.image}
               alt="product picture"

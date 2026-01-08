@@ -12,7 +12,7 @@ const ExpertCard = ({ data }) => {
         <p className="text-[#838383]">{data.about}</p>
         <p className="font-medium">
           <img
-            src="../src/assets/Icon.png"
+            src="/src/assets/Icon.png"
             alt="icon"
             className="inline px-1"
           />

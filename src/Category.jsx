@@ -26,48 +26,48 @@ const Category = () => {
         id: 4,
 
         name: "Digestion",
-        image: "../src/assets/Stomach.png",
+        image: "/src/assets/Stomach.png",
       },
       {
         id: 5,
         name: "Bones",
-        image: "../src/assets/Bones.png",
+        image: "/src/assets/Bones.png",
       },
       {
         id: 6,
         name: "Immunity",
-        image: "../src/assets/Immunity.png",
+        image: "/src/assets/Immunity.png",
       },
        {
-        id: 1,
+        id: 7,
         name: "All",
-        image: "../src/assets/All.png",
+        image: "/src/assets/All.png",
       },
       {
-        id: 2,
+        id: 8,
         name: "Hair",
-        image: "../src/assets/Hair.png",
+        image: "/src/assets/Hair.png",
       },
       {
-        id: 3,
+        id: 9,
         name: "Skin",
-        image: "../src/assets/Skin.png",
+        image: "/src/assets/Skin.png",
       },
       {
-        id: 4,
+        id: 10,
 
         name: "Digestion",
-        image: "../src/assets/Stomach.png",
+        image: "/src/assets/Stomach.png",
       },
       {
-        id: 5,
+        id: 11,
         name: "Bones",
-        image: "../src/assets/Bones.png",
+        image: "/src/assets/Bones.png",
       },
       {
-        id: 6,
+        id: 12,
         name: "Immunity",
-        image: "../src/assets/Immunity.png",
+        image: "/src/assets/Immunity.png",
       }
       
 

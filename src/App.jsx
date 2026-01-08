@@ -19,7 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Body />}>
             <Route path="/shop" element={<ShopContainer />}>
-              <Route index element={<Shop />} />
+              <Route index element={<Shop />}  />
               <Route path="/shop/details/:id" element={<ProdDetails />} />
               <Route path="/shop/ingredients" element={<InDetails />} />
             </Route>
